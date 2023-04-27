@@ -1,0 +1,49 @@
+body {
+  background-image: url('https://previews.123rf.com/images/julienguillaume/julienguillaume1809/julienguillaume180900015/111829876-digital-conversion-text-on-blue-network-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+form {
+  margin: 50px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, output {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0062cc;
+}

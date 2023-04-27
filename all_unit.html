@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="unit1.css">
+  </head>
+  <body>
+    <!-- HTML code for the unit converter form -->
+    <h1>Unit Converter</h1>
+    <form>
+      <label for="unit">Convert from:</label>
+      <select id="unit" name="unit">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="meters">Meters</option>
+        <option value="kilometers">Kilometers</option>
+        <option value="inches">Inches</option>
+        <option value="feet">Feet</option>
+        <option value="miles">Miles</option>
+        <option value="pounds">Pounds</option>
+        <option value="kilograms">Kilograms</option>
+      </select>
+      <br>
+      <label for="value">Value:</label>
+      <input type="number" id="value" name="value" required>
+      <br>
+      <label for="result">Convert to:</label>
+      <select id="result" name="result">
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+        <option value="kilometers">Kilometers</option>
+        <option value="meters">Meters</option>
+        <option value="feet">Feet</option>
+        <option value="inches">Inches</option>
+        <option value="miles">Miles</option>
+        <option value="kilograms">Kilograms</option>
+        <option value="pounds">Pounds</option>
+      </select>
+      <br>
+      <output id="output"></output>
+      <br>
+      <button type="button" onclick="convert()">Convert</button>
+    </form>
+    <script>
+      // JavaScript code for the unit converter
+      function convert() {
+        const unit = document.getElementById('unit').value;
+        const value = parseFloat(document.getElementById('value').value);
+        const result = document.getElementById('result').value;
+        let outputValue;
+        if (unit === 'celsius' && result === 'fahrenheit') {
+          outputValue = (value * 9/5) + 32;
+          document.getElementById('output').innerHTML = value.toFixed(2) + ' Celsius = ' + outputValue.toFixed(2) + ' Fahrenheit';
+        } else if (unit === 'fahrenheit' && result === 'celsius') {
+          outputValue = (value - 32) * 5/9;
+          document.getElementById('output').innerHTML = value.toFixed(2) + ' Fahrenheit = ' + outputValue.toFixed(2) + ' Celsius';
+        } else if (unit === 'meters' && result === 'kilometers') {
+          outputValue = value / 1000;
+          document.getElementById('output').innerHTML = value.toFixed(2) + ' Meters = ' + outputValue.toFixed(2) + ' Kilometers';
+        } else if (unit === 'kilometers' && result === 'meters') {
+          outputValue = value * 1000;
+          document.getElementById('output').innerHTML = value.toFixed(2) + ' Kilometers = ' + outputValue.toFixed(2) + ' Meters';
+        } else if (unit === 'inches' && result === 'feet')
